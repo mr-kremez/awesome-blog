@@ -13,6 +13,10 @@ module.exports = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loaders: ['react-hot-loader/webpack', 'babel']
+        },
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
         }]
     },
     resolve: {
