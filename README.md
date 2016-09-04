@@ -1,2 +1,6 @@
 # awesome-blog
-Awesome blog tha is built on nodejs
+Awesome blog
+
+# Technologies
+
+Koa, React, Redux, Webpack, Sass
