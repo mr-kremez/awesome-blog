@@ -38,3 +38,6 @@ jspm_packages
 
 # Idea files
 .idea
+
+# Build for dev environment
+/build
