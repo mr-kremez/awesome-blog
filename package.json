@@ -7,7 +7,9 @@
     "webserver": "node api/src/server.js",
     "build": "node_modules/.bin/webpack",
     "dev": "node_modules/.bin/webpack-dev-server",
-    "lint": "eslint . --ext .js --ext .jsx"
+    "lint": "eslint . --ext .js --ext .jsx",
+    "deploy": "NODE_ENV=production webpack -p",
+    "clean": "rm -rf app/dist app/build"
   },
   "repository": {
     "type": "git",

@@ -4,14 +4,14 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: process.env.NODE_ENV === 'production' ? '' : 'source-map',
     entry: [
         path.resolve(ROOT_PATH, 'app/src/index')
     ],
     module: {
         preLoaders: [{
             test: /\.jsx?$/,
-            loaders: ['eslint'],
+            loaders: process.env.NODE_ENV === 'production' ? [] : ['eslint'],
             include: path.resolve(ROOT_PATH, 'app')
         }],
         loaders: [{
@@ -28,7 +28,7 @@ module.exports = {
         extensions: ['', '.js', '.jsx']
     },
     output: {
-        path: path.resolve(ROOT_PATH, 'app/build'),
+        path: process.env.NODE_ENV === 'production' ? path.resolve(ROOT_PATH, 'app/dist') : path.resolve(ROOT_PATH, 'app/build'),
         publicPath: '/',
         filename: 'bundle.js'
     },
