@@ -33,6 +33,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "html-webpack-plugin": "^2.22.0",
+    "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "koa": "^1.2.2",
     "koa-cors": "0.0.16",
@@ -46,6 +47,9 @@
     "webpack": "^1.13.2"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-immutable": "^1.6.0",
+    "mocha": "^3.0.2",
     "react-hot-loader": "^3.0.0-beta.3",
     "redux-devtools": "^3.3.1",
     "redux-devtools-dock-monitor": "^1.1.1",
